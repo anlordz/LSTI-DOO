@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+	
+                <head>
+                    <title>Semana 3</title>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <link href="static/bookstore.css" rel="stylesheet" type="text/css"/>
+                </head>
+                
+        <body>
+            <h1>Agregar nuevo libro</h1>
+                <form action="CrearLibro">
+                    <article>
+                <header>
+                  <h2>Información general</h2>
+                </header>
+		<p>
+		<label>Nombre:</label>
+		<input type = "text" name = "txt-nombre" value = ""/>
+                </p>
+                <p>
+		<label>Precio:</label>
+		<input type = "text" name = "txt-precio" value = ""/>
+		<p>
+		<label>ISBN:</label>
+		<input type = "text" name = "txt-isbn" value = ""/>
+		</p>
+                <p>
+		<label>Fecha de Publicación:</label>
+		<input type = "text" name = "txt-fechaP" value = ""/>
+		</p>
+                <br>
+                <header><h2>Información del género</h2></header>
+                <p>
+		<label>Género</label>
+			<select name="genero" id=select>
+				<option value="Seleccione">Seleccione</option>
+				<option value="Comedia">Comedia</option>
+				<option value="Economía">Economía</option>
+				<option value="Deportes">Deportes</option>
+				<option value="Ciencia">Ciencia</option>
+			</select>
+                </p>
+                <br>
+                <header><h2>Información de publicación</h2></header>
+                <p>
+		<label>Editorial:</label>
+		<input type = "text" name = "txt-editorial" value = ""/>
+		</p>
+                <p>
+		<label>Autor:</label>
+		<input type = "text" name = "txt-autor" value = ""/>
+                </p>
+                <br>
+		<input type= 'submit' class= "btn" value = "Guardar"/>
+               </article>
+		
+		</form>
+	</body>
+</html>
