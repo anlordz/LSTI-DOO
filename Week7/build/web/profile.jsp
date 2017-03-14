@@ -16,7 +16,7 @@ for(int i = 0; i<cookies.length; i++){
   }
 }
 %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" import="java.io.*,java.util.*"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,9 +26,9 @@ for(int i = 0; i<cookies.length; i++){
     <body style="background-color: <%=value%>">
           
         <form action="ProfileController"> 
-        <h1>Bienvenido,<%= request.getAttribute("username") %> </h1>
-        <%= request.getAttribute("name") %>
-        <%= request.getAttribute("lastName") %>
+        <h1>Bienvenido,<%= session.getAttribute("username") %> </h1>
+        <%= session.getAttribute("name") %>
+        <%= session.getAttribute("lastName") %>
         
         <h2>Color:</h2><select  name="color" > 
             <option value="">Seleccionar</option>
@@ -41,7 +41,7 @@ for(int i = 0; i<cookies.length; i++){
         <input type="submit" value="Guardar"/>
         
         <br>
-        <a href="LongoutController" onClick="document.form.submit();">Cerrar Sesión</a>
+        <a href="LogoutController" onClick="document.form.submit();">Cerrar Sesión</a>
         </form>
     </body>
 </html>

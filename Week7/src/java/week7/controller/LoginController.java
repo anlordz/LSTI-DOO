@@ -53,9 +53,11 @@ public class LoginController extends HttpServlet {
 
         //Construye instancia del modelo User
         User user = new User(txtUsername,txtPassword, txtName,txtlastName);
-        
+        session.setAttribute("username", user.getUsername());
+        session.setAttribute("password", user.getPassword());
+        session.setAttribute("name", user.getName());
+        session.setAttribute("lastName", user.getlastName());
         Database.getUserByUsername(txtUsername,txtPassword);
-        session.setAttribute("username", user.getUsername()); 
         
 
         //Se define a donde se enviará el objeto request y response.

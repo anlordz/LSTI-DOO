@@ -17,18 +17,18 @@ public class User {
     
 
     public User(String name, String lastName, String username, String password){
-        name="";
-        lastName="";
-        this.username="";
-        this.password ="";
+        this.name="Andrea";
+        this.lastName="Lozada";
+        this.username="Andy";
+        this.password ="Password";
     }
 
 public String getName(){
       
-      return name;
+      return this.name;
     }
 public String getlastName(){
-    return lastName;
+    return this.lastName;
 }
 public String getUsername(){
       

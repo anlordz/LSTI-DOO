@@ -3,7 +3,10 @@
     Created on : 11/03/2017, 06:00:33 PM
     Author     : Andrea
 --%>
-
+<%  String username = "";
+    if(session.getAttribute("username") != null)
+    response.sendRedirect("profile.jsp");
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,15 +17,15 @@
     <body>
         <h1>Bienvendio</h1>
         <form action="LoginController" method="post">  
-            <label>Nombre:</label>
-            <input type="text" name="name"><br>
-            <label>Apellidos:</label>
-            <input type="text" name="lastName"><br>
             <label>Usuario:</label>
-            <input type="text" name="txt-username"><br>  
-            <label>Contraseña:</label>
-            <input type="password" name="txt-password"><br>  
-            <input type="submit" value="Iniciar Sesión">  
+            <input type="text" name="username" />
+            <br>
+            <label>Password:</label>
+            <input type="password" name="password"/>
+            
+            <br>
+            <input type="submit" value="Iniciar Sesión" name="submit"/>
+
         </form>  
     </body>
 </html>
